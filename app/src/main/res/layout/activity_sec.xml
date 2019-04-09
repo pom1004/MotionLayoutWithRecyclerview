@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layoutDescription="@xml/scene_btn"
+    app:showPaths="true"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/iv_recorded_program"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/rl_recorded_program_info"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            style="@style/styleRecordedProgramImage"
+            android:layout_width="@dimen/guide_list_width"
+            android:layout_height="@dimen/guide_list_height"
+            android:visibility="visible"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/rl_recorded_program_info"
+        layout="@layout/text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/guide_list_height"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_recorded_program"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- <ImageView
+         android:id="@+id/rl_recorded_program_info"
+         android:layout_width="0dp"
+         android:layout_height="@dimen/guide_list_height"
+         android:background="@color/colorPrimary"
+         android:visibility="visible"
+         app:layout_constraintEnd_toStartOf="@+id/button"
+         app:layout_constraintHorizontal_bias="0.5"
+         app:layout_constraintStart_toEndOf="@+id/iv_recorded_program"
+         app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/guide_list_height"
+        android:background="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

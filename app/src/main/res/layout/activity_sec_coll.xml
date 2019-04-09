@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_optimizationLevel="standard|dimensions|chains"
+    app:showPaths="true"
+    tools:context=".SecActivity"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_recorded_program"
+        style="@style/styleRecordedProgramImage"
+        android:layout_width="@dimen/guide_list_width"
+        android:elevation="10dp"
+        android:layout_height="@dimen/guide_list_height"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        android:id="@+id/rl_recorded_program_info"
+        layout="@layout/text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/guide_list_height"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/iv_recorded_program"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- <ImageView
+         android:id="@+id/rl_recorded_program_info"
+         android:layout_width="0dp"
+         android:layout_height="@dimen/guide_list_height"
+         android:background="@color/colorPrimary"
+         app:layout_constraintEnd_toStartOf="@+id/button"
+         app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/guide_list_height"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_recorded_program"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
