@@ -41,6 +41,12 @@ public class MyWishListAdapter extends RecyclerView.Adapter<MyWishListAdapter.Cu
         return 30;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+
+        return position;
+    }
+
 
     public static class CustomViewHolder extends RecyclerView.ViewHolder {
 
